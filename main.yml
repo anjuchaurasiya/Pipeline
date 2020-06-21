@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_prompt:
+    - name: username
+      prompt: "what is your name"
+      private: no
+  tasks:
+    - debug:
+        msg: "Logging in as {{ username }}"
