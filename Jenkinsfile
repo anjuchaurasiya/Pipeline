@@ -12,7 +12,7 @@ pipeline {
         stage('Greet the guy') {
             steps {
                 echo '> Deploying the application ...'
-                sh 'ansible-playbook -vv main.yml --extra-vars "username=${params.Person}"'
+                sh "ansible-playbook -vv main.yml --extra-vars username=${params.Person}"
             }
         }
     }
