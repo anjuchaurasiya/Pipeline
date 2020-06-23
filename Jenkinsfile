@@ -7,7 +7,7 @@ pipeline {
         stage('Greet the guy') {
             steps {
                 echo '> Deploying the application ...'
-                sh 'ansible-playbook -vv main.yml -e "username=${params.Person}"
+                sh 'ansible-playbook -vv main.yml -e "username=${params.Person}"'
             }
         }
     }
