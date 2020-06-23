@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo '> Deploying the application ...'
                 ansiblePlaybook(
-                    playbook: 'main.yml -e ${params.Person}'
+                    playbook: 'main.yml'
                 )
             }
         }
