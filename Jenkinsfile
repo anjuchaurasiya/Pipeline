@@ -9,7 +9,9 @@ pipeline {
                 echo '> Deploying the application ...'
                 ansiblePlaybook(
                     playbook: 'main.yml'
-                    extras: "${params.Person}"
+                    extraVars: [
+                        username: "${params.Person}",
+                   ]     
                 )
             }
         }
